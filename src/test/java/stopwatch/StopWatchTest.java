@@ -12,7 +12,7 @@ public class StopWatchTest {
         int minutes = stopWatch.getMinutes();
         Assertions.assertEquals(14, minutes);
     }
-
+    //test for negative value refuse
     @Test
     void test2() {
         StopWatch stopWatch = new StopWatch();
@@ -21,6 +21,15 @@ public class StopWatchTest {
         if (minutes != 0) {
             Assertions.fail("Invalid value");
         }
+    }
+    //test that stopwatch has hours
+    @Test
+    void test3(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.record(120);
+        int hours=stopWatch.getHours();
+        Assertions.assertEquals(2,hours);
+
     }
 
 }
