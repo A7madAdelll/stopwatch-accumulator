@@ -39,7 +39,9 @@ public class StopWatchTest {
         stopWatch.record(30);
         stopWatch.record(30);
         stopWatch.record(30);
-        Assertions.assertEquals(2,stopWatch.getHours(),"stop watch doesn't commulate minutes");
+
+        System.out.println(stopWatch.getMinutes()+" "+stopWatch.getHours());
+        Assertions.assertEquals(2,stopWatch.getHours(),"stop watch doesn't acomulate minutes");
 
 
     }
