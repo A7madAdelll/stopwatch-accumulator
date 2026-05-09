@@ -18,6 +18,10 @@ public class StopWatch {
                 this.hours+=(this.minutes/60);
                 this.minutes=this.minutes%60;
             }
+            if(this.hours>=this.dayHours){
+                this.days+=this.hours/this.dayHours;
+                this.hours=this.hours%this.dayHours;
+            }
 
         }
 
@@ -30,6 +34,6 @@ public class StopWatch {
         return hours;
     }
     public int getDays(){
-        return days;
+        return this.days;
     }
 }
