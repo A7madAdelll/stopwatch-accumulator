@@ -9,7 +9,7 @@ public class StopWatch {
         this.dayHours=dayHours;
     }
     StopWatch(){
-        this.dayHours=0;
+        this.dayHours=24;
     }
     public void record(int minutes) {
         if (minutes >= 0) {
