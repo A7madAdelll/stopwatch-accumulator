@@ -28,7 +28,19 @@ public class StopWatchTest {
         StopWatch stopWatch = new StopWatch();
         stopWatch.record(120);
         int hours=stopWatch.getHours();
-        Assertions.assertEquals(2,hours);
+        Assertions.assertEquals(2,hours,"stopWatch does have hours");
+
+    }
+    //test comulative values of the minutes
+    @Test
+    void test4(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.record(30);
+        stopWatch.record(30);
+        stopWatch.record(30);
+        stopWatch.record(30);
+        Assertions.assertEquals(2,stopWatch.getHours(),"stop watch doesn't commulate minutes");
+
 
     }
 
